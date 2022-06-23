@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "start-test dev:next 3000 cy:e2e",
+    "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cy:e2e": "cypress open --e2e --browser chrome --config baseUrl=http://localhost:3000"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -17,8 +19,11 @@
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
+    "cypress": "^10.2.0",
+    "cypress-watch-and-reload": "^1.10.0",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
+    "start-server-and-test": "^1.14.0",
     "typescript": "4.7.4"
   }
 }
