@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ServerResponse } from "../pages/api/newsletter";
 
-export function Newsletter() {
+export function NewsletterForm() {
   const [emailInput, setEmailInput] = useState("");
   const [confirmMessage, setConfirmMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
