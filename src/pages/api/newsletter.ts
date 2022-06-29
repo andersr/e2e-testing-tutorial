@@ -12,10 +12,10 @@ export default function handler(
 ) {
   const { email } = req.body;
 
-  if (!email) {
-    res.status(400).json({ message: "Email is required", success: false });
-    return;
-  }
+    if (!email) {
+      res.status(400).json({ message: "Email is required", success: false });
+      return;
+    }
 
   if (!emailValidator.validate(email)) {
     res
