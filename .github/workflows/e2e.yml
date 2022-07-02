@@ -1,0 +1,19 @@
+name: E2E Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    env:
+      TEST_ENV: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run ci
+          # build: npm run build
+          # start: npm start
+          # wait-on: 'http://localhost:8080'
