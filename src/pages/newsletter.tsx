@@ -50,7 +50,7 @@ const Newsletter: NextPage = () => {
           {errorMessage && (
             <div data-test="errorMessage">Error: {errorMessage}</div>
           )}
-          <h3>NOTHER FAIL</h3>
+          <h3>Test FAIL</h3>
           <input
             type={"email"}
             value={emailInput}
