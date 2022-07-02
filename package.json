@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "start-test dev:next 3000 cy:e2e",
+    "dev": "start-test dev:next 3000 cy:open",
     "dev:next": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "prestart": "next build",
+    "start": "next start -p 8080",
     "lint": "next lint",
-    "cy:e2e": "cypress open --e2e --browser chrome --config baseUrl=http://localhost:3000"
+    "cy:open": "cypress open --e2e --browser chrome --config baseUrl=http://localhost:3000",
+    "cy:run": "cypress run --e2e --browser chrome --config baseUrl=http://localhost:8080",
+    "ci": "start-test start 8080 cy:run"
   },
   "dependencies": {
     "email-validator": "^2.0.4",
